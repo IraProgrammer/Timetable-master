@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Timetable</string>
 
-    <string name="menu_timetable">Расписание</string>
+    <string name="menu_all_stations">Все станции</string>
     <string name="menu_about">О приложении</string>
     <string name="menu_myPlans">Мои поездки</string>
     <string name="menu_add">Запланировать поездку</string>

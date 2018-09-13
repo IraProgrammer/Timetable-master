@@ -56,7 +56,7 @@ public class MainActivity extends DaggerAppCompatActivity {
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.menu_timetable).withIcon(FontAwesome.Icon.faw_circle),
+                        new PrimaryDrawerItem().withName(R.string.menu_all_stations).withIcon(FontAwesome.Icon.faw_circle),
                         new PrimaryDrawerItem().withName(R.string.menu_add).withIcon(FontAwesome.Icon.faw_plus),
                         new PrimaryDrawerItem().withName(R.string.menu_myPlans).withIcon(FontAwesome.Icon.faw_heart),
                         new DividerDrawerItem(),
