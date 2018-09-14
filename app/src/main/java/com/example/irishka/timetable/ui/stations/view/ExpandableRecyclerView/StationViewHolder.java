@@ -7,16 +7,20 @@ import com.example.irishka.timetable.R;
 import com.example.irishka.timetable.domain.entities.Station;
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class StationViewHolder extends ChildViewHolder {
 
-    private TextView artistName;
+    @BindView(R.id.tv_station)
+    TextView station;
 
     public StationViewHolder(View itemView) {
         super(itemView);
-        artistName = itemView.findViewById(R.id.tv_station);
+        ButterKnife.bind(this, itemView);
     }
 
     public void onBind(Station station) {
-        artistName.setText(station.getStationTitle());
+        this.station.setText(station.getStationTitle());
     }
 }

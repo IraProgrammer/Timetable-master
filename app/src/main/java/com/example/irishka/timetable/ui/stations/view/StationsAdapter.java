@@ -44,14 +44,14 @@ public class StationsAdapter extends ExpandableRecyclerViewAdapter<CountryViewHo
     @Override
     public void onBindChildViewHolder(StationViewHolder holder, int flatPosition, ExpandableGroup group,
                                       int childIndex) {
-        final Station artist = ((Country) group).getItems().get(childIndex);
-        holder.itemView.setOnClickListener(view -> onItemClickListener.onItemClick(artist));
-        holder.onBind(artist);
+        final Station station = ((Country) group).getItems().get(childIndex);
+        holder.itemView.setOnClickListener(view -> onItemClickListener.onItemClick(station));
+        holder.onBind(station);
     }
 
     @Override
     public void onBindGroupViewHolder(CountryViewHolder holder, int flatPosition,
                                       ExpandableGroup group) {
-        holder.setGenreTitle(group);
+        holder.setCountryTv(group);
     }
 }

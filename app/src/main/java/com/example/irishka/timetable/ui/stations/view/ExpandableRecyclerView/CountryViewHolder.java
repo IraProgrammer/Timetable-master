@@ -9,22 +9,26 @@ import com.example.irishka.timetable.R;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.view.animation.Animation.RELATIVE_TO_SELF;
 
 public class CountryViewHolder extends GroupViewHolder {
 
-    private TextView genreTitle;
+    @BindView(R.id.tv_country)
+    TextView countryTv;
 
-    private ImageView arrow;
+    @BindView(R.id.list_item_country_arrow)
+    ImageView arrow;
 
     public CountryViewHolder(View itemView) {
         super(itemView);
-        genreTitle = itemView.findViewById(R.id.tv_country);
-        arrow = (ImageView) itemView.findViewById(R.id.list_item_country_arrow);
+        ButterKnife.bind(this, itemView);
     }
 
-    public void setGenreTitle(ExpandableGroup group) {
-        genreTitle.setText(group.getTitle());
+    public void setCountryTv(ExpandableGroup group) {
+        countryTv.setText(group.getTitle());
     }
 
     @Override
